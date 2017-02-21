@@ -225,13 +225,13 @@ a.button:hover {
 
 .s_profi .row {
   margin-left: -30px;
-  margin-right: -50px; }
+  margin-right: -25px; }
 
 .profi_left {
   margin-right: 17px;
   color: #981818; }
   .profi_left i {
-    font-size: 70px;
+    font-size: 104px;
     line-height: 150px;
     padding-top: 10px;
     padding-left: 24px; }
@@ -387,8 +387,7 @@ form {
     font-size: 26px;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.13);
-    padding: 10px 0; 
-    color: #fff; }
+    padding: 10px 0; }
   .s_back .button {
     background-color: #fff;
     color: #000;
