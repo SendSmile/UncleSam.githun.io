@@ -4,33 +4,23 @@
 <head>
 
 	<meta charset="utf-8" />
-
 	<title>UncleSAM</title>
 	<meta content="" name="description" />
-	<link rel="shortcut icon" href="favicon.png" />
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="libs/bootstrap/bootstrap-grid-3.3.2.min.css" />
-
 	<link rel="stylesheet" href="libs/owl/assets/owl.carousel.css" />
-
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js" />
-
 	<link rel="stylesheet" href="libs/animate/animate.min.css" />
 	<link rel="stylesheet" href="css/fonts.css" />
 	<link rel="stylesheet" href="css/main.css" />
 	<link rel="stylesheet" href="css/media.css" />
-
 	<link rel="stylesheet" href="libs/font-awesome-4.2.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="libs/fancybox/jquery.fancybox.css" />
 
 </head>
 <body>
 
-	<div class="loader">
-		<div class="loader_inner"></div>
-	</div>
 
 	<header>
 
@@ -74,6 +64,8 @@
 								<span class="hidden-md hidden=lg">Дополнительно</span>	
 								</span>
 							</div>
+
+							<!-- Для переключения между вкладками tab_item-->
 							<div class="tab_content">
 								<div class="tab_item">
 									<ul>
@@ -216,7 +208,7 @@
 									</span>
 								</label>
 								<div class="button_wrap">
-								<a href="#hidden_form" class="button btn_red popup_c">Отправить заявку</a> 
+								<a href="#callback" class="button btn_red popup_c">Отправить заявку</a> 
 									
 								</div>
 							</form>
@@ -296,7 +288,7 @@
 			<div class="row">
 				<div class="col-md-12">
 					<h3>Повышение знаний с UncleSam — это оптимальное сочетание интенсива и углубленного подхода.</h3>
-					<a href="#hidden_form" class="button btn_white popup_c">Отправить заявку</a>
+					<a href="#callback" class="button fancybox">Отправить заявку</a>
 				</div>
 			</div>
 		</div>
@@ -310,7 +302,6 @@
 			<div class="tab_content">
 				<div class="tab_item">
 					Ул. Воскресенского,  дом 15
-					<div class="map">
 						<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=lClbA0qKgpN54ygqDVwsUWHIsY-t4auH&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
 					</div>
 				</div>
@@ -337,7 +328,7 @@
 						</div> 
 					</div>
 					<div class="button_wrap">
-						<a href="#hidden_form" class="button btn_red popup_c">Заказать звонок</a>
+						<a href="#callback" class="button fancybox">Заказать звонок</a>
 					</div>
 				</div>
 			</div>
@@ -345,43 +336,22 @@
 	</footer>
 
 	<div class="hidden">
-		<form id="hidden_form">
-			<h2>Связаться с нами</h2>
-			<label>
-				<span>Ваше имя:</span>
-				<input type="text" name="name" required />
-			</label>
-			<label>
-				<span>Ваш телефон:</span>
-				<input type="text" name="phone" required />
-			</label>
-			<label>
-				<span>Ваш город:</span>
-				<span class="label_select">
-					<select name="city">
-						<option>Москва</option>
-						<option>Караганда</option>
-					</select>
-				</span>
-			</label>
-			<div class="button_wrap">
-				<button class="button btn_green">Отправить заявку</button>
-			</div>
-		</form>
-		<form id="form_back">
+	
+		
+		<form id="callback" class="pop_form">
 			<h2>Заказать звонок</h2>
 			<label>
 				<span>Ваше имя:</span>
-				<input type="text" name="name" required />
+				<input type="text" name="name" required="required" />
 			</label>
 			<label>
 				<span>Ваш телефон:</span>
-				<input type="text" name="phone" required />
+				<input type="text" name="phone" required="required" />
 			</label>
 			<div class="button_wrap">
-				<button class="button btn_green">Отправить заявку</button>
+				<button class="button" type="submit">Отправить заявку</button>
 			</div>
-		</form>
+		
 	</div>
 
 	<!--[if lt IE 9]>
@@ -391,16 +361,18 @@
 	<script src="libs/respond/respond.min.js"></script>
 	<![endif]-->
 	
-	<script src="libs/jquery/jquery-1.11.2.min.js"></script>
+	<script src="libs/jquery/jquery.min.js"></script>
 	<script src="libs/modernizr/modernizr.js"></script>
 	<script src="libs/stellar/jquery.stellar.min.js"></script>
 	<script src="libs/owl/owl.carousel.min.js"></script>
 	<script src="libs/magnific/jquery.magnific-popup.min.js"></script>
 	<script src="libs/waypoints/waypoints.min.js"></script>
 	<script src="libs/animate/animate-css.js"></script>
-	
+	<script src="libs/fancybox/jquery.fancybox.pack.js"></script>
 	<script src="js/common.js"></script>
-
-	<!-- Yandex.Metrika counter --><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter33238768 = new Ya.Metrika({id:33238768, webvisor:true, clickmap:true, trackLinks:true, accurateTrackBounce:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/33238768" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->	
+	<script src="libs/fancybox/jquery.fancybox.pack.js"></script>
+	
+	<!-- Yandex.Metrika counter -->
+	<!-- /Yandex.Metrika counter -->	
 </body>
 </html>

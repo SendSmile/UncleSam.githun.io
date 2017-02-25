@@ -1,9 +1,10 @@
 $(document).ready(function() {
 
 
-	$('.popub').magnificPopup({type:'image'});
-	$('.popub_c').magnificPopup();
-	
+	$(".popub").magnificPopup({type:"image"});
+	$(".popub_c").magnificPopup();
+
+
 		$.stellar ({
 		responsive: true,
 		horizontalOffset: 60
@@ -28,7 +29,10 @@ $(document).ready(function() {
 		wResize()
 	});
 
-	// Для переключения между вкладками скидки
+
+	$(".fancybox").fancybox();
+
+	// Для переключения между вкладками скидки owl carousel
 	$(".top_phone .wrapper .tab").click(function() {
 		$(".top_phone .wrapper .tab").removeClass("active").eq($(this).index()).addClass("active");
 		$(".top_phone .tab_item").hide().eq($(this).index()).fadeIn()
@@ -62,24 +66,37 @@ $(document).ready(function() {
 
 	//Аякс отправка форм
 	//Документация: http://api.jquery.com/jquery.ajax/
-	$("#form").submit(function(e) {
-		var ths = $(this);
-		e.preventDefault;
+	/*$("#hidden_form").submit(function() {
 		$.ajax({
 			type: "POST",
 			url: "mail.php",
-			data: $(this).serialize()
+			data: $("#hidden_form").serialize()
 		}).done(function() {
 			alert("Спасибо за заявку!");
 			setTimeout(function() {
-				var magnificPopup = $.magnificPopup.instance; 
-				magnificPopup.close(); 
-				ths.trigger("reset");
+				$.fancybox.close();
+			}, 1000);
+		});
+		return false;
+	});*/
+
+			$("#callback").submit(function() {
+		$.ajax({
+			type: "_POST",
+			url: "mail.php",
+			data: $("#callback").serialize()
+		}).done(function() {
+			alert("Спасибо за заявку!");
+			setTimeout(function() {
+				$.fancybox.close();
 			}, 1000);
 		});
 		return false;
 	});
-	
+
+
+
+
 });
 
 
@@ -90,8 +107,8 @@ $(window).load(function() {
 	$(".top_header h2").animated("fadeinDown", "fadeOut");
 	$(".tabs_header .wrapper").animated("flipInY", "fadeOut");
 	$(".s_rewview h2").animated("fadeInUp", "fadeOut");
-	$(".profi_item").animated("fadeInRight", "fadeOut");
-	$(".s_profi form").animated("zoomInRight", "fadeOut");
+	$(".profi_item").animated("fadeInUp", "fadeOut");
+	$(".s_profi form").animated("fadeInUp", "fadeOut");
 	$(".s_back h3").animated("fadeInUp", "fadeOut");
 	$(".footer").animated("fadeInUp", "fadeOut");
 	$(".s_contacts h2").animated("fadeInUp", "fadeOut");

@@ -35,6 +35,7 @@ p strong {
   font-family: "RobotoBold", sans-serif;
   font-weight: normal; }
 
+/* Выделение формы при заполнении */
 body input:focus:required:invalid,
 body textarea:focus:required:invalid {
   color: red;
@@ -49,6 +50,7 @@ body textarea:required:valid {
 
 header {
   min-height: 640px;
+  max-height: 720px;
   background-image: url(../img/top_bg.jpg);
   background-position: top center;
   background-size: cover;
@@ -456,10 +458,35 @@ footer {
 .bottom_phone .tab_item:first-child {
   display: block; }
 
-#hidden_form {
+#hidden_form   {
+  display: inline-block;
   margin: auto;
   max-width: 420px;
+  background-repeat: #000;
   position: relative; }
   #hidden_form h2 {
     text-align: center;
     font-weight: normal; }
+
+
+.hidden {
+  display: none;
+}
+.pop_form input[type="text"] {
+  display: block;
+  line-height: 24px;
+  margin: 0 auto 24px;
+  width: 90%;
+}
+
+.pop_form .button {
+  margin: auto;
+}
+
+.pop_form h3 {
+  margin: 10px auto 15px;
+  text-align: center;
+  font-weight: normal;
+  font-family: "RobotoCondersedBold";
+  text-transform: uppercase;
+}
