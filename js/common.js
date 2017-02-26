@@ -1,10 +1,5 @@
 $(document).ready(function() {
 
-
-	$(".popub").magnificPopup({type:"image"});
-	$(".popub_c").magnificPopup();
-
-
 		$.stellar ({
 		responsive: true,
 		horizontalOffset: 60
@@ -63,22 +58,6 @@ $(document).ready(function() {
 			return $(this).attr("src").replace(".svg", ".png");
 		});
 	};
-
-	//Аякс отправка форм
-	//Документация: http://api.jquery.com/jquery.ajax/
-	/*$("#hidden_form").submit(function() {
-		$.ajax({
-			type: "POST",
-			url: "mail.php",
-			data: $("#hidden_form").serialize()
-		}).done(function() {
-			alert("Спасибо за заявку!");
-			setTimeout(function() {
-				$.fancybox.close();
-			}, 1000);
-		});
-		return false;
-	});*/
 
 	
 	//E-mail Ajax Send
