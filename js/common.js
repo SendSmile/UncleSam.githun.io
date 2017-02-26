@@ -80,25 +80,25 @@ $(document).ready(function() {
 		return false;
 	});*/
 
-			$("#callback").submit(function() {
+	
+	//E-mail Ajax Send
+	$("#callback").submit(function() { //Change
+		var th = $(this);
 		$.ajax({
-			type: "_POST",
-			url: "mail.php",
-			data: $("#callback").serialize()
+			type: "POST",
+			url: "mail.php", //Change
+			data: th.serialize()
 		}).done(function() {
-			alert("Спасибо за заявку!");
+			alert("Thank you!");
 			setTimeout(function() {
-				$.fancybox.close();
+				// Done Functions
+				th.trigger("reset");
 			}, 1000);
 		});
 		return false;
 	});
 
-
-
-
 });
-
 
 // Документ для работы анимации с animatet.css
 

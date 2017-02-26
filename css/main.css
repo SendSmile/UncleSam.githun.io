@@ -50,6 +50,7 @@ body textarea:required:valid {
 
 header {
   min-height: 640px;
+  
   background-image: url(../img/top_bg.jpg);
   background-position: top center;
   background-size: cover;
@@ -470,6 +471,10 @@ footer {
 
 .hidden {
   display: none;
+}
+
+.pop_form {
+  margin-top: 0;
 }
 .pop_form input[type="text"] {
   display: block;
